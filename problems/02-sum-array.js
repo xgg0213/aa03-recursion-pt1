@@ -12,8 +12,14 @@ sumArray([1, 2, 3, 4, 5]); // 15
 
 function sumArray(arr) {
   // Your code here 
+  if (arr.length < 1) return 0;
+  return arr.pop() + sumArray(arr)
+
+  //why can we return 2 values? meaning both line 15 and 16 returns?
 }
   
+debugger
+console.log(sumArray([1, 2, 3])); //  6
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;
